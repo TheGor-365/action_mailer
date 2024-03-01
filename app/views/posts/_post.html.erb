@@ -1,0 +1,13 @@
+<div id="<%= dom_id post %>" class="border border-dark rounded p-5">
+  <strong>
+    <%= post.title %>
+  </strong><br><br>
+
+  <small class="text-muted">
+    <%= post.body %>
+  </small><br><br>
+
+  <span class="border border-secondary rounded p-2">
+    <%= post.user.email %>
+  </span>
+</div>
