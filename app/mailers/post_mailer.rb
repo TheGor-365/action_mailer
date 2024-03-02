@@ -5,9 +5,14 @@ class PostMailer < ApplicationMailer
   #
   #   en.post_mailer.new_post_email.subject
   #
-  def new_post_email
-    @greeting = "Hi"
+  def new_post_email(user, post)
+    @title = "Your Post Email"
+    @user = user
+    @post = post
 
-    mail to: "to@example.org"
+    mail(
+      to: @user.email,
+      subject: "New Post on #{post.title}"
+    )
   end
 end

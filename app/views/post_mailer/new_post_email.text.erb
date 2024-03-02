@@ -1,3 +1,8 @@
-Post#new_post_email
+<%= @title %>
 
-<%= @greeting %>, find me in app/views/post_mailer/new_post_email.text.erb
+---------------------------
+Title: <%= Post.first.title %>
+Body: <%= Post.first.body %>
+---------------------------
+<%= post_url(Post.first, only_path: true) %>
+<%= post_url(Post.first, host: 'localhost:3000') %>

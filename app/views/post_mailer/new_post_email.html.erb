@@ -1,5 +1,12 @@
-<h1>Post#new_post_email</h1>
-
-<p>
-  <%= @greeting %>, find me in app/views/post_mailer/new_post_email.html.erb
+<p class="text-muted">
+  <%= @title %>
+  <%= @user.email %>
 </p>
+
+<div class="my-3">
+  Title: <%= Post.first.title %>
+  Body: <%= Post.first.body %>
+  <hr class="my-5">
+  <%= post_url(Post.first, only_path: true) %><br>
+  <%= link_to 'Show Post', post_url(Post.first, host: 'localhost:3000') %>
+</div>
